@@ -4,9 +4,10 @@
 En la carpeta 'database' se encuentran el dump de la base de datos con el nombre 'productos.sql' el cual ya contiene data dummy para el testing de la API que sea necesario. Este archivo pude ser importado en el phpmyadmin que nos brinda apache.
 
 #### MIGRATION
-<em>Primero se debe instalar el proyecto</em>
-En la carpeta 'database' se encuentran las migraciones correspondientes
-en caso que se desee generar una base de datos desde cero.
+<em>(Primero se debe instalar el proyecto)</em>
+<br>
+En la carpeta 'database/migrations' se encuentran las migraciones correspondientes en caso que se desee generar una base de datos desde cero.
+<br>
 <strong>Ejecutar las migraciones:</strong> <code>php artisan migrate</code>
 
 ## Learning Laravel
