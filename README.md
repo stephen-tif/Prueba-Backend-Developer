@@ -1,3 +1,44 @@
+## Instalación de proyecto 'productos-api'
+
+#### Git clone
+<code>git clone https://github.com/stephen-tif/Prueba-Backend-Developer.git</code>
+
+#### Instalando dependendencias con Composer
+<em>( cd in your project directory)</em>
+<br>
+composer install
+<br>
+composer dumpautoload -o
+
+#### Comprobando los valores en config/app.php
+
+<em>(Environment)</em>
+<br>
+'env' => env('APP_ENV', 'production'),
+<br>
+<em>(Debug mode)</em>
+<br>
+'debug' => env('APP_DEBUG', false),
+<br>
+<em>URL</em>
+<br>
+'url' => env('APP_URL', 'http://localhost'),
+
+#### Defina su archivo de entorno, en la raíz del directorio de su proyecto.
+<em>(Copy the environment template)</em>
+cp .env.example .env
+
+#### Genere la clave para su archivo de entorno, definirá el valor de 'APP_KEY ='
+<code>php artisan key:generate</code>
+
+##### Edite luego el archivo .env para que se adapte a sus necesidades 
+
+#### Termine borrando la configuración y generando el caché.
+<code>php artisan config:clear</code>
+<br>
+<code>php artisan config:cache</code>
+
+
 ## Instalación de base de datos y uso de los data dummy
 
 #### DATABASE
@@ -7,61 +48,12 @@ En la carpeta 'database' se encuentran el dump de la base de datos con el nombre
 <em>(Primero se debe instalar el proyecto)</em>
 <br>
 En la carpeta 'database/migrations' se encuentran las migraciones correspondientes en caso que se desee generar una base de datos desde cero.
-<br>
+<br><br>
 <strong>Ejecutar las migraciones:</strong> <code>php artisan migrate</code>
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### SEEDS
+<em>(Antes se debe tener una base de datos para ejecutar los seeds)</em>
+<br>
+En la carpeta 'database/seeds' se encuentran las seeds correspondientes en caso que se necesite data dummy en una base de datos vacia.
+<br><br>
+<strong>Ejecutar los seeds:</strong> <code>php artisan db:seed</code>
