@@ -1,0 +1,1 @@
+Cambia tu contraseña <a href="http://localhost/productos-api/public/api/passwordReset/{{$token}}"></a>
