@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "877bfe4a-3aa9-4394-9958-88a25798753d",
+		"name": "Prueba Backend Developer - Stephen Melendez",
+		"description": "    En la presente coleccion podemos observar cuatro diferentes carpetas \n    que corresponden a las rutas para manejo de respuestas HTTP separado por modulos.\n\n    - Autenticación\n    - CRUD Usuarios\n    - CRUD Productos\n    - Recuperacion de password",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticación",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "stephenvero101@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "    Esta peticion genera el JWT para acceder a \n    otras peticiones.\n\n    (El tiempo de expiracion del token se modificó\n    para que dure 7 dias)"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"auth",
+								"logout"
+							]
+						},
+						"description": "    Esta peticion se encarga de cerrar la \n    sesion iniciada en la peticion Login,\n    sin embargo es indispensable colocar el token."
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"auth",
+								"refresh"
+							]
+						},
+						"description": "    Esta peticion se encarga de actualizar \n    el token, sin embargo es indispensable \n    colocar el token actual."
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/auth/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"auth",
+								"me"
+							]
+						},
+						"description": "    Esta peticion se encarga de retornar los \n    datos del usuario loggeado, para ello debe\n    conocer el token actual."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CRUD Usuarios",
+			"item": [
+				{
+					"name": "Listado de usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "    Peticion get que retorna todos los usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Juan Perez",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "29097878",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "juan",
+									"type": "text"
+								},
+								{
+									"key": "f_nacimiento",
+									"value": "2000-06-08",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "juanp@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "    Creacion de un nuevo registro en la tabla usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Carlos Perez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "carlos",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "22337766",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/usuarios/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"usuarios",
+								"6"
+							]
+						},
+						"description": "    Modificacion de un registro en la tabla usuarios, a \n    partir del numero de id."
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/usuarios/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"usuarios",
+								"6"
+							]
+						},
+						"description": "    Peticion por id que retorna los datos de un usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"usuarios",
+								"7"
+							]
+						},
+						"description": "    Peticion de tipo delete para eliminar un usuario a \n    partir del id."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CRUD Productos",
+			"item": [
+				{
+					"name": "Listado de productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos"
+							]
+						},
+						"description": "    Peticion get que retorna todos los productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "SO-0005",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Bebida energetizante Raptor",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1.25",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Bebida raptor de 100ml",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/Users/juanar/Desktop/wallpaper/alfabetajuega-metroid-1-070817.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos"
+							]
+						},
+						"description": "    Creacion de un nuevo registro en la tabla productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "SO-0002",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Bebida energetizante Hi energi",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "0.50",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Bebida hi energi de 100ml",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/Users/juanar/Desktop/wallpaper/alfabetajuega-metroid-1-070817.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos/update/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos",
+								"update",
+								"13"
+							]
+						},
+						"description": "    Modificacion de un registro en la tabla \n    productos, a partir del numero de id."
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos",
+								"1"
+							]
+						},
+						"description": "    Peticion por id que retorna los datos de un producto"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos",
+								"14"
+							]
+						},
+						"description": "    Peticion de tipo delete para eliminar un producto a \n    partir del id."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/productos/search/energetizante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"productos",
+								"search",
+								"energetizante"
+							]
+						},
+						"description": "    Buscador de productos, por campo sku o nombre."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Recuperación de contraseña",
+			"item": [
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "stephenvero101@hotmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"forgotPassword"
+							]
+						},
+						"description": "    Esta peticion requiere conocer el email como \n    parametro, posteriormente genera un link que \n    sera enviado por correo electronico para \n    reestablecer la contraseña.\n\n    (El link se enviara para testear al archivo \n    storage/logs/laravel.log)"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "FkLyNh1Li8",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "stephenvero101@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/productos-api/public/api/passwordReset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"productos-api",
+								"public",
+								"api",
+								"passwordReset"
+							]
+						},
+						"description": "    Esta peticion se encarga directamente del\n    restablecimiento de la contraseña, para ello\n    se debe enviar como parametro el email del \n    usuario, el token generado en el link de la \n    peticion 'Forgot password' \n    (Es un token distinto al JWT) y por ultimo \n    la nueva contraseña."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Byb2R1Y3Rvcy1hcGlcL3B1YmxpY1wvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNjAzNDM0NTgxLCJleHAiOjE2MDQwMzk0MjEsIm5iZiI6MTYwMzQzNDYyMSwianRpIjoiRWh2YzUwUjhhaWw0SlRVYSIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.F2GSCKH3R66JB98mibZuHRxTllCpwYDaC_-E5O6ALss",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8fd232b4-dbe6-40b7-ae5d-305915a39737",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "831d5ee4-3fd5-4943-ac4a-c345434182db",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
