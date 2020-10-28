@@ -68,3 +68,56 @@ En la carpeta 'routes' se encuentra un archivo de tipo JSON con el nombre 'Prueb
 
 #### LINK EN LINEA DE LA COLECCIÓN
 <a>https://www.getpostman.com/collections/8994ae1c6f593f4bc3bc</a>
+
+
+## EJEMPLOS DE USO DE API
+Para poder acceder a los request de los crud se necesita tener un JWT(Json Web Token), ejemplos:
+
+#### LOGIN
+<strong>METODO POST:</strong>
+<br>
+<p>Al loguearnos obtenemos el token de acceso a otras rutas del API (este token tiene una duracion de 7 dias vigentes)</p>
+<a>http://localhost/productos-api/public/api/auth/login</a>
+<br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>email</li>
+    <li>password</li>
+</ul>
+
+#### LOGOUT
+<strong>METODO POST:</strong>
+<br>
+<p>Al cerrar sesion desaparecemos el token de acceso para mayor seguridad</p>
+<a>http://localhost/productos-api/public/api/auth/logout</a>
+<br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+#### REFRESH
+<strong>METODO POST:</strong>
+<br>
+<p>Al hacer refresh lo que se esta haciendo es reestablecer nuestro token de acceso por uno nuevo</p>
+<a>http://localhost/productos-api/public/api/auth/refresh</a>
+<br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+#### ME
+<strong>METODO POST:</strong>
+<br>
+<p>Si en algun momento del desarrollo queremos obtener los datos del usuario atraves del token asignado, podremos obtenerlo sin ningun problema</p>
+<a>http://localhost/productos-api/public/api/auth/me</a>
+<br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
