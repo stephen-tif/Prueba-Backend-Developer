@@ -122,6 +122,32 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>Bearer <i>YOUR_TOKEN</i></li>
 </ul>
 
+## FORGOT PASSWORD
+<strong>METODO POST:</strong>
+<br>
+<p>Para restablecer una contraseña se debe brindar un email valido al cual sera enviado el URL de recuperacion.</p>
+<code>http://localhost/productos-api/public/api/forgotPassword</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>email</li>
+</ul>
+
+## RESET PASSWORD
+<strong>METODO POST:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/passwordReset</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>token <i>// Este token es asignado en 'forgot password'</i></li>
+    <li>email</li>
+    <li>password <i>// Nueva contraseña</i></li>
+</ul>
+
+
 ## LISTAR USUARIOS
 <strong>METODO GET:</strong>
 <br>
