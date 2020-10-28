@@ -159,7 +159,7 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>email</li>
     <li>password</li>
 </ul>
-<br><br>
+<br>
 <strong>Authorization:</strong>
 <br>
 <ul>
@@ -181,7 +181,7 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>email</li>
     <li>password</li>
 </ul>
-<br><br>
+<br>
 <strong>Authorization:</strong>
 <br>
 <ul>
@@ -192,6 +192,96 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
 <strong>METODO DELETE:</strong>
 <br>
 <code>http://localhost/productos-api/public/api/usuarios/{id}</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+
+## LISTAR PRODUCTOS
+<strong>METODO GET:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/productos</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## OBTENER UN PRODUCTO
+<strong>METODO GET:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/productos/{id}</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## BUSCAR PRODUCTOS
+<strong>METODO GET:</strong>
+<p>Se puede hacer busqueda de producto enviando como parametro sku o nombre</p>
+<br>
+<code>http://localhost/productos-api/public/api/productos/search/{param}</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## CREAR UN PRODUCTO
+<strong>METODO POST:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/productos</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>sku</li>
+    <li>nombre</li>
+    <li>cantidad</li>
+    <li>precio</li>
+    <li>descripcion</li>
+    <li>imagen <i>//file</i></li>
+</ul>
+<br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## MODIFICAR PRODUCTO
+<strong>METODO POST:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/productos/update/{id}</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>sku</li>
+    <li>nombre</li>
+    <li>cantidad</li>
+    <li>precio</li>
+    <li>descripcion</li>
+    <li>imagen <i>//file</i></li>
+</ul>
+<br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## ELIMINAR PRODUCTO
+<strong>METODO DELETE:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/productos/{id}</code>
 <br><br>
 <strong>Authorization:</strong>
 <br>
