@@ -70,10 +70,10 @@ En la carpeta 'routes' se encuentra un archivo de tipo JSON con el nombre 'Prueb
 <a>https://www.getpostman.com/collections/8994ae1c6f593f4bc3bc</a>
 
 
-## EJEMPLOS DE USO DE API
+# EJEMPLOS DE USO DE API
 Para poder acceder a los request de los crud se necesita tener un JWT(Json Web Token), ejemplos:
 
-#### LOGIN
+## LOGIN
 <strong>METODO POST:</strong>
 <br>
 <p>Al loguearnos obtenemos el token de acceso a otras rutas del API (este token tiene una duracion de 7 dias vigentes)</p>
@@ -86,7 +86,7 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>password</li>
 </ul>
 
-#### LOGOUT
+## LOGOUT
 <strong>METODO POST:</strong>
 <br>
 <p>Al cerrar sesion desaparecemos el token de acceso para mayor seguridad</p>
@@ -98,7 +98,7 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>Bearer <i>YOUR_TOKEN</i></li>
 </ul>
 
-#### REFRESH
+## REFRESH
 <strong>METODO POST:</strong>
 <br>
 <p>Al hacer refresh lo que se esta haciendo es reestablecer nuestro token de acceso por uno nuevo</p>
@@ -110,7 +110,7 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
     <li>Bearer <i>YOUR_TOKEN</i></li>
 </ul>
 
-#### ME
+## ME
 <strong>METODO POST:</strong>
 <br>
 <p>Si en algun momento del desarrollo queremos obtener los datos del usuario atraves del token asignado, podremos obtenerlo sin ningun problema</p>
