@@ -77,8 +77,8 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
 <strong>METODO POST:</strong>
 <br>
 <p>Al loguearnos obtenemos el token de acceso a otras rutas del API (este token tiene una duracion de 7 dias vigentes)</p>
-<a>http://localhost/productos-api/public/api/auth/login</a>
-<br>
+<code>http://localhost/productos-api/public/api/auth/login</code>
+<br><br>
 <strong>Parametros:</strong>
 <br>
 <ul>
@@ -90,8 +90,8 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
 <strong>METODO POST:</strong>
 <br>
 <p>Al cerrar sesion desaparecemos el token de acceso para mayor seguridad</p>
-<a>http://localhost/productos-api/public/api/auth/logout</a>
-<br>
+<code>http://localhost/productos-api/public/api/auth/logout</code>
+<br><br>
 <strong>Authorization:</strong>
 <br>
 <ul>
@@ -102,8 +102,8 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
 <strong>METODO POST:</strong>
 <br>
 <p>Al hacer refresh lo que se esta haciendo es reestablecer nuestro token de acceso por uno nuevo</p>
-<a>http://localhost/productos-api/public/api/auth/refresh</a>
-<br>
+<code>http://localhost/productos-api/public/api/auth/refresh</code>
+<br><br>
 <strong>Authorization:</strong>
 <br>
 <ul>
@@ -114,8 +114,85 @@ Para poder acceder a los request de los crud se necesita tener un JWT(Json Web T
 <strong>METODO POST:</strong>
 <br>
 <p>Si en algun momento del desarrollo queremos obtener los datos del usuario atraves del token asignado, podremos obtenerlo sin ningun problema</p>
-<a>http://localhost/productos-api/public/api/auth/me</a>
+<code>http://localhost/productos-api/public/api/auth/me</code>
+<br><br>
+<strong>Authorization:</strong>
 <br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## LISTAR USUARIOS
+<strong>METODO GET:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/usuarios</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## OBTENER UN USUARIO
+<strong>METODO GET:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/usuarios/{id}</code>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## CREAR USUARIO
+<strong>METODO POST:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/usuarios</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>nombre</li>
+    <li>telefono</li>
+    <li>username</li>
+    <li>f_nacimiento</li>
+    <li>email</li>
+    <li>password</li>
+</ul>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## MODIFICAR USUARIO
+<strong>METODO PUT:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/usuarios/{id}</code>
+<br><br>
+<strong>Parametros:</strong>
+<br>
+<ul>
+    <li>nombre</li>
+    <li>telefono</li>
+    <li>username</li>
+    <li>f_nacimiento</li>
+    <li>email</li>
+    <li>password</li>
+</ul>
+<br><br>
+<strong>Authorization:</strong>
+<br>
+<ul>
+    <li>Bearer <i>YOUR_TOKEN</i></li>
+</ul>
+
+## ELIMINAR USUARIO
+<strong>METODO DELETE:</strong>
+<br>
+<code>http://localhost/productos-api/public/api/usuarios/{id}</code>
+<br><br>
 <strong>Authorization:</strong>
 <br>
 <ul>
