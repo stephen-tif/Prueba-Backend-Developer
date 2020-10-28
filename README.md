@@ -70,7 +70,7 @@ En la carpeta 'routes' se encuentra un archivo de tipo JSON con el nombre 'Prueb
 <a>https://www.getpostman.com/collections/8994ae1c6f593f4bc3bc</a>
 
 
-# EJEMPLOS DE USO DE API
+# DOCUMENTACIÓN DE USO DE API
 Para poder acceder a los request de los crud se necesita tener un JWT(Json Web Token), ejemplos:
 
 ## LOGIN
